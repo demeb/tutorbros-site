@@ -1587,10 +1587,10 @@ body {
 
 .divider {
     color: rgba(255, 255, 255, 0.2);
-
 }
 
 
+/* --- UNIVERSAL MOBILE FIXES --- */
 
 @media (max-width: 768px) {
     /* 1. Prevent Horizontal Scrolling */
@@ -1651,5 +1651,58 @@ body {
     .footer-cta {
         padding: 40px 20px;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Forces the success columns to stack vertically */
+    .achievements-box, .grid-3, .expertise-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Ensures cards take up the full width of the phone screen */
+    .achieve-item, .card, .expertise-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .profile-row, .profile-row.reverse {
+    flex-direction: column !important; /* Forces photo and text to stack */
+    text-align: center;
+    gap: 30px;
+}
+
+.profile-img img {
+    width: 100% !important; /* Scales photo to phone width */
+    height: auto !important;
+    max-width: 300px; /* Keeps it from getting too large */
+}
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stacks Logo above Links */
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-wrap: wrap; /* Allows links to go to the next line */
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem; /* Slightly smaller text for mobile */
     }
 }
