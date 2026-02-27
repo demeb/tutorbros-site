@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Session | TutorBros</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="bg-navy-full">
 
     <nav class="navbar navbar-dark">
+
+
+
+
+
         <a href="index.html" style="text-decoration: none;">
     <div class="logo">
         <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
     </div>
 </a>
         <ul class="nav-links">
-            <li><a href="index.html">მთავარი</a></li>
-            <li><a href="about.html">ჩვენ შესახებ</a></li>
-             <li><a href="pricing.html">ფასები</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+             <li><a href="pricing.html">Pricing</a></li>
 
-            <li><a href="contact.html" class="active">დაჯავშნე ახლავე</a></li>
+            <li><a href="contact.html" class="active">Book Now</a></li>
         </ul>
 
 
+
         <li class="lang-switch">
-            <a href="../index.html" class="lang-btn">🇺🇸 EN</a>
-            <span class="divider">|</span>
-            <a href="index.html" class="lang-btn active">🇬🇪 GE</a>
+    <a href="index.html" class="lang-btn active">🇺🇸 EN</a>
+    <span class="divider">|</span>
+    <a href="ka/index.html" class="lang-btn">🇬🇪 GE</a>
         </li>
 
 
@@ -37,8 +43,8 @@
         <div class="contact-grid">
             
             <div class="contact-info">
-                <h1>დავიწყოთ!</h1>
-                <p>მზად ხართ შემდეგი ნაბიჯის გადასადგმელად? დაგვიკავშირდით კონსულტაციისთვის. მოდით განვიხილოთ თქვენი მიზნები და გავარკვიოთ, თუ როგორ შეიძლება ჩვენმა რეპეტიტორობამ წარმატებისკენ მიგიყვანოთ.</p>
+                <h1>Let's Get Started!</h1>
+                <p>Ready to take the next step? Reach out to us for a consultation. Let's discuss your goals and explore how our tailored tutoring can lead you to success.</p>
                 
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
@@ -51,45 +57,45 @@
                 </div>
 
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/demetrebzekalava" target="_blank"><i class="fab fa-linkedin"></i> დემეტრე</a>
-                    <a href="https://linkedin.com/in/beqa-bzekalava-74254a222" target="_blank"><i class="fab fa-linkedin"></i> ბექა</a>
+                    <a href="https://linkedin.com/in/demetrebzekalava" target="_blank"><i class="fab fa-linkedin"></i> Demetre</a>
+                    <a href="https://linkedin.com/in/beqa-bzekalava-74254a222" target="_blank"><i class="fab fa-linkedin"></i> Beqa</a>
                 </div>
             </div>
 
             <div class="contact-form-card">
                 <form action="https://formspree.io/f/xlgwordn" method="POST">
                     <div class="form-group">
-                        <label>სახელი და გვარი</label>
-                        <input type="text" name="name" placeholder="შეიყვანეთ თქვენი სახელი და გვარი" required>
+                        <label>Full Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>ელ.ფოსტა</label>
+                        <label>Email Address</label>
                         <input type="email" name="email" placeholder="email@example.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label>ინტერესის საგანი</label>
+                        <label>Subject of Interest</label>
                         <select name="subject" required>
-                            <option value="" disabled selected>ამოირჩიეთ საგანი</option>
+                            <option value="" disabled selected>Select a subject</option>
                             <option value="SAT">SAT/PSAT</option>
-                            <option value="Olympiad Physics">საოლიმპიადე ფიზიკა</option>
-                            <option value="Calculus ">კალკულუსი </option>
-                            <option value="AP Physics ">AP ფიზიკა </option>
-                            <option value="AP Mathematics ">AP მათემატიკა </option>
-                            <option value="High School Mathematics">უმაღლესი სკოლის მათემატიკა</option>
-                            <option value="High School Physics">უმაღლესი სკოლის ფიზიკა</option>
-                            <option value="Middle School Mathematics">საშუალო სკოლის მათემატიკა</option>
-                            <option value="C++/Algorithms">C++/ალგორითმები</option>
+                            <option value="Olympiad Physics">Olympiad Physics</option>
+                            <option value="Calculus ">Calculus </option>
+                            <option value="AP Physics ">AP Physics </option>
+                            <option value="AP Mathematics ">AP Mathematics </option>
+                            <option value="High School Mathematics">High School Mathematics</option>
+                            <option value="High School Physics">High School Physics</option>
+                            <option value="Middle School Mathematics">Middle School Mathematics</option>
+                            <option value="C++/Algorithms">C++/Algorithms</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>მესიჯი</label>
+                        <label>Message</label>
                         <textarea name="message" rows="5" placeholder="Tell us about your goals..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit">მესიჯის გაგზავნა</button>
+                    <button type="submit" class="btn-submit">Send Message</button>
                 </form>
             </div>
 
@@ -104,20 +110,20 @@
     <div class="container footer-grid">
         
         <div class="footer-message">
-            <h2>დავიწყოთ!</h2>
-            <p>გმადლობთ რომ გვეწვიეთ <strong>ძმების ტუტორობის გვერდი</strong>. ჩვენ მოხარულები ვართ, რომ თქვენი საგანმანათლებლო მოგზაურობის ნაწილი ვართ. თუ გსურთ მათემატიკასა და ფიზიკაში წარმატების მიღწევა, საერთაშორისო ტესტებში მაქსიმალური ქულების მიღება თუ ოლიმპიადაზე წარმატების მიღწევა, ჩვენ აქ ვართ, რომ დაგეხმაროთ.</p>
-            <p>მზად ხართ შემდეგი ნაბიჯის გადასადგმელად? დაგვიკავშირდით დღესვე კონსულტაციისთვის. მოდით განვიხილოთ თქვენი მიზნები და გავარკვიოთ, თუ როგორ შეიძლება ჩვენმა რეპეტიტორობამ წარმატებისკენ მიგიყვანოთ.</p>
-            <a href="contact.html" class="btn-primary">დაჯავშნე კონსულტაცია</a>
+            <h2>Let’s Get Started!</h2>
+            <p>Thank you for visiting <strong>Brothers Tutoring Hub</strong>. We’re excited to be part of your educational journey. Whether you’re aiming for Mathematics & Physics excellence, scoring Maximum in Standardized Tests, or aspiring to Shine in Olympiad Competitions, we’re here to guide you.</p>
+            <p>Ready to take the next step? Reach out to us today for a consultation. Let’s discuss your goals and explore how our tutoring can lead you to success.</p>
+            <a href="contact.html" class="btn-primary">Book a Consultation</a>
         </div>
 
         <div class="footer-links">
-            <h3>სწრაფი ბმულები</h3>
+            <h3>Quick Links</h3>
             <ul>
-                <li><a href="index.html">მთავარი</a></li>
-                <li><a href="about.html">ჩვენ შესახებ</a></li>
-                <li><a href="pricing.html">ფასები</a></li>
-                <li><a href="contact.html">დაჯავშნა</a></li>
-                <li><a href="https://www.youtube.com/@TutorBrothers" target="_blank">იუთუბ გვერდი</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Book Now</a></li>
+                <li><a href="https://www.youtube.com/@TutorBrothers" target="_blank">YouTube Channel</a></li>
             </ul>
         </div>
 
@@ -137,7 +143,6 @@
         <p>&copy; 2026 Bzekalava Brothers Tutoring Hub. All rights reserved.</p>
     </div>
 </footer>
-
 
 
 
@@ -165,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
+
 
 
 </body>
