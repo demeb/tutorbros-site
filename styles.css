@@ -1587,4 +1587,55 @@ body {
 
 .divider {
     color: rgba(255, 255, 255, 0.2);
+
+}
+
+
+
+/* --- MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+    /* 1. Fix the Container Padding */
+    .container {
+        padding: 0 5%;
+    }
+
+    /* 2. Stack the Hero Section */
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .hero-content-pro h1 {
+        font-size: 2.5rem; /* Smaller text for mobile */
+    }
+
+    /* 3. Stack the Grid (Why Us & Expertise) */
+    .grid-3, .expertise-grid {
+        grid-template-columns: 1fr !important; /* Forces 1 column instead of 3 */
+        gap: 20px;
+    }
+
+    /* 4. Hide or Adjust the Navbar */
+    .nav-links {
+        display: none; /* In a real pro site, you'd use a 'hamburger' menu here */
+    }
+    
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    /* 5. Fix Images */
+    .image-wrapper img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 6. Footer Layout */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
 }
