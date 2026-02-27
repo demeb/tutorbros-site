@@ -1,0 +1,1590 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1a365d; /* Dark Blue */
+}
+
+.logo span {
+    color: #3182ce; /* Bright Blue */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3182ce;
+}
+
+.btn-nav {
+    background: #3182ce;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600'); 
+    background-size: cover;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #1a365d;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #3182ce;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #718096;
+}
+
+/* Buttons */
+.btn-primary {
+    padding: 15px 35px;
+    background: #1a365d;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.btn-secondary {
+    padding: 15px 35px;
+    border: 2px solid #1a365d;
+    color: #1a365d;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+
+/* Reusable Layout Classes */
+.container {
+    padding: 0 10%;
+}
+
+.py-20 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.bg-light {
+    background-color: #f7fafc;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #1a365d;
+}
+
+/* Grid System */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.card, .spec-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover, .spec-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #ebf8ff;
+    color: #3182ce;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+}
+
+.spec-card i {
+    font-size: 3rem;
+    color: #1a365d;
+    margin-bottom: 15px;
+}
+
+/* Achievement Box */
+.achievements-box {
+    background: #1a365d;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.achieve-item {
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.achieve-item i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #63b3ed;
+}
+
+/* About Page Specifics */
+.bg-navy { background-color: #0d1b2a; color: white; }
+.text-white { color: white !important; }
+
+.about-hero {
+    background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);
+    color: white;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.profile-row.reverse { flex-direction: row-reverse; }
+
+.profile-img img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px #3182ce;
+}
+
+.badge {
+    background: #ebf8ff;
+    color: #3182ce;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.profile-text h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    color: #1a365d;
+}
+
+.mission {
+    font-style: italic;
+    color: #718096;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.profile-text ul { list-style: none; }
+.profile-text li { margin-bottom: 15px; font-size: 1.1rem; }
+.profile-text i { color: #38a169; margin-right: 10px; }
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 40px 0 80px;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-card i { font-size: 2.5rem; color: #63b3ed; margin-bottom: 15px; }
+
+
+/* Full Navy Background for Contact Page */
+.bg-navy-full {
+    background-color: #0d1b2a; /* Same Navy as About page */
+    color: white;
+    min-height: 100vh;
+}
+
+/* Dark Navbar version */
+.navbar-dark {
+    background: #0d1b2a !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.navbar-dark .nav-links a { color: #ffffff; }
+.navbar-dark .logo { color: white; }
+
+/* Contact Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.contact-info h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #63b3ed;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    color: #a0aec0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #63b3ed;
+    margin-right: 20px;
+}
+
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-links a:hover { color: #63b3ed; }
+
+/* Form Styling */
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #cbd5e0;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: #718096;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #2b6cb0;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness for Contact */
+@media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-info { text-align: center; }
+    .info-item { justify-content: center; }
+}
+
+/* Pricing Page Specific Styles */
+.bg-light-blue {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    min-height: 100vh;
+}
+
+.badge-price {
+    background: #3182ce;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-header h1 {
+    font-size: 3.5rem;
+    color: #1a365d;
+    margin-top: 15px;
+}
+
+.pricing-main-card {
+    background: white;
+    border-radius: 30px;
+    padding: 60px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 1000px;
+    margin: -40px auto 0;
+    position: relative;
+    z-index: 5;
+}
+
+.price-range h2 {
+    font-size: 4rem;
+    color: #2b6cb0;
+    margin-bottom: 10px;
+}
+
+.price-range h2 span {
+    font-size: 1.5rem;
+    color: #718096;
+}
+
+.pricing-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    border-top: 1px solid #edf2f7;
+    padding-top: 40px;
+}
+
+.detail-item i {
+    font-size: 2rem;
+    color: #3182ce;
+    margin-bottom: 15px;
+}
+
+.detail-item h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.policy-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.policy-card:hover {
+    transform: translateY(-5px);
+    background: white;
+}
+
+.policy-icon {
+    font-size: 2rem;
+    color: #3182ce;
+    margin-bottom: 20px;
+}
+
+.mt-20 { margin-top: 50px; }
+.mb-20 { margin-bottom: 50px; }
+
+
+
+
+/* FOOTER CTA STYLES */
+.footer-cta {
+    background-color: #0a192f; /* Dark Professional Navy */
+    color: white;
+    padding: 80px 0 20px 0;
+    margin-top: 50px;
+    border-top: 4px solid #3182ce; /* Bright blue accent line */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr; /* Wide message, narrow links, med graphics */
+    gap: 50px;
+    align-items: start;
+}
+
+.footer-message h2 {
+    font-size: 2.5rem;
+    color: #63b3ed;
+    margin-bottom: 20px;
+}
+
+.footer-message p {
+    color: #cbd5e0;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-links h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+.footer-links a:hover {
+    color: #63b3ed;
+    padding-left: 5px;
+}
+
+/* Right Side Graphics */
+.footer-graphics {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-cloud {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    font-size: 3rem;
+    color: rgba(99, 179, 237, 0.2); /* Faded blue icons */
+}
+
+.icon-cloud i {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Stagger the animations so icons move at different times */
+.icon-cloud i:nth-child(even) { animation-delay: 1s; }
+.icon-cloud i:nth-child(3n) { animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); color: rgba(99, 179, 237, 0.5); }
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Mobile Fix */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-links ul { display: inline-block; text-align: left; }
+    .footer-graphics { display: none; } /* Hide icons on small mobile to save space */
+}
+
+
+/* EXPERTISE SECTION STYLES */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.expertise-card {
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-10px);
+}
+
+.expertise-header {
+    background: #f8f9fa; /* Light grey header like the image */
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.expertise-header img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.expertise-header h3 {
+    color: #718096;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.expertise-list li {
+    color: #4a5568;
+    padding: 8px 0;
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* The small circles before the list items */
+.expertise-list li::before {
+    content: "○";
+    position: absolute;
+    left: 0;
+    color: #a0aec0;
+    font-weight: bold;
+}
+
+.btn-quote {
+    display: block;
+    background: #2ecc71; /* The exact green from your screenshot */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin: 0 30px 30px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-quote:hover {
+    background: #27ae60;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+
+/* --- PREMIUM HERO STYLES --- */
+.hero-premium {
+    position: relative;
+    background: #0a192f; /* Deep Navy Background */
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+/* Subtle glow effect in the background */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(49, 130, 206, 0.15) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+}
+
+.academy-tag {
+    color: #3182ce;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.hero-content-pro h1 {
+    font-size: 3.8rem;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.accent-text {
+    background: linear-gradient(to right, #63b3ed, #3182ce);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content-pro p {
+    color: #8892b0;
+    font-size: 1.2rem;
+    max-width: 550px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* --- BUTTONS --- */
+.btn-glow {
+    background: #3182ce;
+    color: white;
+    padding: 18px 35px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(49, 130, 206, 0.3);
+    transition: 0.3s ease;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.btn-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(49, 130, 206, 0.5);
+    background: #2b6cb0;
+}
+
+.btn-outline-white {
+    border: 2px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 16px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-outline-white:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: white;
+}
+
+/* --- IMAGE & BADGE --- */
+.image-wrapper {
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #112240;
+    padding: 10px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+.floating-badge i { color: #f6ad55; font-size: 1.2rem; }
+.floating-badge span { font-weight: 800; color: #0a192f; font-size: 0.9rem; }
+
+/* Responsive for Tablets/Phones */
+@media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-content-pro p { margin: 0 auto 40px; }
+    .hero-image-pro { max-width: 400px; margin: 0 auto; }
+    .hero-content-pro h1 { font-size: 2.8rem; }
+}
+
+
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* For the dark hero version */
+    text-decoration: none;
+}
+
+.logo span {
+    color: #3182ce; /* The "Bros" in bright blue */
+    margin-left: 2px;
+}
+
+/* Navbar specific styling to match your screenshot */
+.navbar {
+    background: rgba(10, 25, 47, 0.95); /* Deep navy with slight transparency */
+    backdrop-filter: blur(10px);
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    background: #3182ce; /* Bright Blue */
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(49, 130, 206, 0.3);
+}
+
+.logo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: #1a365d; /* Professional Dark Navy */
+}
+
+.logo-accent {
+    font-weight: 800;
+    color: #3182ce; /* Bright Blue */
+}
+
+
+body {
+    background-color: #f8fafc; /* This makes the white cards "pop" */
+}
+
+.expertise-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03); /* Soft, professional shadow */
+}
+
+/* Change the header of the cards to be bright white instead of grey */
+.expertise-header {
+    background: #ffffff;
+    padding: 40px 20px;
+}
+
+/* The green button from your screenshot, made slightly brighter */
+.btn-quote {
+    background: #10b981; 
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+
+/* --- GLOBAL RESET & DARK THEME --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #0a192f; /* Deep Navy Background */
+    color: #ffffff; /* Global Text Color: White */
+}
+
+/* Force all headings and paragraphs to be visible */
+h1, h2, h3, h4, p, li, span, label {
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container {
+    padding: 0 10%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.py-20 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background: #0a192f;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff !important; /* Forced White */
+}
+
+.logo-accent {
+    color: #3182ce !important; /* Bright Blue */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #63b3ed;
+}
+
+.btn-nav {
+    background: #3182ce;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* --- HERO SECTION --- */
+.hero-premium {
+    background: #0a192f;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 60px;
+}
+
+.hero-content-pro h1 {
+    font-size: 3.8rem;
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.accent-text {
+    color: #63b3ed; /* Sky Blue for "Komarovi Graduates" */
+}
+
+.hero-content-pro p {
+    color: #cbd5e0; /* Light Grey-White for readability */
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.academy-tag {
+    color: #63b3ed;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* --- BUTTONS --- */
+.btn-glow {
+    background: #3182ce;
+    color: white !important;
+    padding: 18px 35px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.btn-outline-white {
+    border: 2px solid #ffffff;
+    color: #ffffff !important;
+    padding: 16px 35px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* --- CARDS & EXPERTISE --- */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+.card, .expertise-card {
+    background: rgba(255, 255, 255, 0.05); /* Slight transparency */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.expertise-header h3 {
+    color: #63b3ed !important; /* Subject titles in Bright Blue */
+    margin-top: 15px;
+}
+
+.expertise-list {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.expertise-list li {
+    color: #ffffff;
+    padding: 8px 0;
+}
+
+.expertise-list li::before {
+    content: "✓ ";
+    color: #10b981; /* Green checkmark */
+}
+
+.btn-quote {
+    background: #10b981;
+    color: white !important;
+    padding: 12px;
+    border-radius: 50px;
+    display: block;
+    font-weight: bold;
+}
+
+/* --- ACHIEVEMENTS --- */
+.achievements-box {
+    background: rgba(49, 130, 206, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #3182ce;
+}
+
+.achieve-item p {
+    color: #ffffff;
+}
+
+.achieve-item i {
+    color: #63b3ed;
+    font-size: 2rem;
+}
+
+/* --- FOOTER --- */
+.footer-cta {
+    background: #071121; /* Slightly darker navy */
+    padding: 60px 0;
+    border-top: 2px solid #3182ce;
+}
+
+.footer-message h2 {
+    color: #63b3ed;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* --- IMAGE STYLING --- */
+.image-wrapper img {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Fix for icons in Expertise section */
+.expertise-header img {
+    filter: brightness(0) invert(1); /* Turns dark icons into white icons */
+    width: 60px;
+}
+
+/* --- FIX FOR WHITE BOXES IN EXPERTISE CARDS --- */
+.expertise-header {
+    background: transparent; /* Removes the white background */
+    padding: 30px 20px 10px;
+    text-align: center;
+    border-bottom: none; /* Cleaner look for dark mode */
+}
+
+.expertise-header img {
+    width: 60px; /* Adjusted size */
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    /* This filter turns black icons into white and removes the 'box' look */
+    filter: brightness(0) invert(1); 
+    background: transparent;
+}
+
+.expertise-card {
+    background: rgba(255, 255, 255, 0.05); /* Soft navy-transparent */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.expertise-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+.expertise-header h3 {
+    color: #63b3ed !important; /* Bright Blue text */
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+/* --- FIX FOR EXPERTISE ICONS --- */
+.expertise-card {
+    background: rgba(255, 255, 255, 0.05); /* Navy-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0; /* Let the header handle top padding */
+    overflow: hidden;
+}
+
+.expertise-header {
+    background: transparent !important; /* Forces removal of the white box */
+    padding: 40px 20px 10px;
+    text-align: center;
+}
+
+.expertise-header img {
+    width: 70px; /* Adjust size to match your preference */
+    height: auto;
+    background: transparent !important; /* Ensure image background is gone */
+    filter: brightness(0) invert(1); /* Turns black icons into white */
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.expertise-header h3 {
+    color: #63b3ed !important; /* Bright Blue for the title */
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 20px 30px 30px;
+}
+
+.expertise-list li {
+    color: #ffffff !important;
+    padding: 8px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Removes the last border line */
+.expertise-list li:last-child {
+    border-bottom: none;
+}
+
+
+
+/* --- PRICING PAGE NAVY OVERHAUL --- */
+
+/* Background reset for the whole page */
+.bg-light-blue {
+    background: #0a192f !important; /* Deep Navy */
+    min-height: 100vh;
+}
+
+/* Header Text */
+.pricing-header h1 {
+    color: #ffffff !important;
+    font-size: 3.5rem;
+}
+
+.pricing-header p {
+    color: #a0aec0 !important;
+}
+
+/* The Main Price Card */
+.pricing-main-card {
+    background: rgba(255, 255, 255, 0.05) !important; /* Transparent Navy */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 60px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+/* Price Text */
+.price-range h2 {
+    color: #63b3ed !important; /* Bright Blue Price */
+    font-size: 4rem;
+}
+
+.price-range h2 span {
+    color: #cbd5e0 !important;
+}
+
+/* Grid inside the pricing card */
+.pricing-details-grid {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    padding-top: 40px;
+}
+
+.detail-item h4 {
+    color: #ffffff !important;
+}
+
+.detail-item p {
+    color: #cbd5e0 !important;
+}
+
+.detail-item i {
+    color: #3182ce !important; /* Darker blue for icons */
+}
+
+/* Policy Cards (at the bottom) */
+.policy-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 40px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.policy-card:hover {
+    background: rgba(255, 255, 255, 0.07) !important;
+    transform: translateY(-5px);
+}
+
+.policy-card h3 {
+    color: #ffffff !important;
+}
+
+.policy-card p {
+    color: #cbd5e0 !important;
+}
+
+.policy-icon {
+    color: #63b3ed !important;
+}
+
+/* Small UI Badge */
+.badge-price {
+    background: #3182ce !important;
+    color: white !important;
+}
+
+/* --- ABOUT US PROFILE NAMES FIX --- */
+.profile-text h2 {
+    color: #63b3ed !important; /* Bright Sky Blue */
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+    margin-bottom: 10px;
+}
+
+/* Optional: Make the mission text more readable too */
+.mission {
+    color: #cbd5e0 !important; /* Soft White/Grey */
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Ensure the list icons are bright */
+.profile-text i {
+    color: #10b981 !important; /* Bright Green for checkmarks */
+}
+
+
+/* DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD */
+
+/* --- UPDATED DEEP PURPLE DESIGN --- */
+
+body {
+    background-color: #0b071e; /* The very dark purple from your photo */
+    color: #ffffff;
+}
+
+/* Why Choose Us Section */
+#why-us {
+    background-color: #0b071e !important;
+}
+
+.card {
+    /* This creates that subtle purple "glow" for the cards */
+    background: linear-gradient(145deg, #161136, #0b071e); 
+    border: 1px solid rgba(99, 179, 237, 0.1);
+    padding: 40px;
+    border-radius: 24px; /* Smoother corners like the photo */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #3182ce;
+    box-shadow: 0 15px 40px rgba(49, 130, 206, 0.2);
+}
+
+/* Card Text Styling */
+.card h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #b0b0d1; /* Slightly muted purple-grey for readability */
+    line-height: 1.7;
+}
+
+/* Icon Styling to match the photo's glow */
+.icon-circle {
+    background: rgba(49, 130, 206, 0.1);
+    color: #63b3ed;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px; /* Squircle shape like the reference */
+    margin: 0 auto 25px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-premium, #specializations, .footer-cta {
+    background-color: #0b071e !important;
+}
+
+/* Update the About Us name fix to work with this purple */
+.profile-text h2 {
+    color: #63b3ed !important; 
+    text-shadow: 0 0 20px rgba(99, 179, 237, 0.4); /* Adds a "Neon" glow */
+}
+
+/* --- PREMIUN SUCCESS SECTION --- */
+.success-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.success-card {
+    background: rgba(255, 255, 255, 0.03); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle glow effect on hover */
+.success-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: #63b3ed;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 179, 237, 0.1);
+}
+
+.success-header h3 {
+    font-size: 1.3rem;
+    color: #63b3ed; /* Bright Blue */
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.success-list {
+    list-style: none;
+}
+
+.success-list li {
+    font-size: 1.05rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px; /* Space between emoji and text */
+}
+
+.success-list li strong {
+    color: #63b3ed;
+}
+
+/* Animations for icons */
+.success-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 179, 237, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+
+/* --- UPDATED WIDE SUCCESS LAYOUT --- */
+
+/* 1. Ensure the container allows for a wider layout */
+#achievements .container {
+    max-width: 1600px; /* Increased from 1400px to give more horizontal room */
+    padding: 0 5%;    /* Reduced side padding to utilize more screen width */
+}
+
+.success-grid {
+    display: grid;
+    /* Uses min-content logic to ensure cards expand to fit text better */
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+    gap: 30px; /* Increased gap for a more premium, airy feel */
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.success-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px; /* Increased padding so cards feel bigger and more professional */
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.success-header h3 {
+    font-size: 1.25rem; /* Increased to look "Normal" and bold */
+    color: #63b3ed;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+}
+
+.success-list li {
+    font-size: 1.05rem; /* Increased from 0.95rem for better readability */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start; /* Better for longer sentences */
+    gap: 12px;
+    line-height: 1.5; /* Makes sentences feel more balanced */
+}
+
+/* Fix for the University Admission card width */
+.success-card:nth-child(3) {
+    grid-column: span 1; 
+}
+
+/* --- LINKEDIN BUTTON STYLING --- */
+.btn-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0077b5; /* Official LinkedIn Blue */
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-linkedin:hover {
+    background-color: #005582;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+}
+
+.text-right .btn-linkedin {
+    flex-direction: row-reverse; /* Flips icon to other side for Beqa's right-aligned text */
+}
+
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.lang-btn {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #a0aec0; /* Grey for inactive */
+    transition: 0.3s;
+}
+
+.lang-btn.active {
+    color: #63b3ed; /* Sky Blue for active */
+    border-bottom: 2px solid #63b3ed;
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.2);
+}
