@@ -1776,3 +1776,27 @@ body {
 }
 
 
+@media screen and (max-width: 768px) {
+    /* Forces the success boxes to stack vertically */
+    .achievements-box {
+        display: flex !important;
+        flex-direction: column !important; /* This is the key fix */
+        gap: 30px !important;
+        padding: 20px !important;
+        width: 100% !important;
+    }
+
+    /* Ensures each card takes the full width of the phone screen */
+    .achieve-item {
+        width: 100% !important;
+        border-right: none !important; /* Removes vertical lines from desktop */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Adds separator line */
+        padding-bottom: 30px !important;
+        text-align: left; /* Keeps it professional like your screenshot */
+    }
+
+    /* Removes the separator line from the very last item */
+    .achieve-item:last-child {
+        border-bottom: none;
+    }
+}
