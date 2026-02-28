@@ -647,27 +647,27 @@ body {
     font-weight: 800;
 }
 
+/* Remove the green markers/ticks entirely */
 .expertise-list {
-    list-style: none;
-    padding: 30px;
-    flex-grow: 1;
+    list-style: none; /* Removes default bullets */
+    padding: 20px;
+    margin: 0;
 }
 
 .expertise-list li {
-    color: #4a5568;
-    padding: 8px 0;
-    font-size: 1.05rem;
     position: relative;
-    padding-left: 25px;
+    padding-left: 0; /* Removes the space where the tick was */
+    margin-bottom: 12px;
+    color: #9ca3af !important; /* Professional dimmed white */
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separator line */
+    padding-bottom: 8px;
 }
 
-/* The small circles before the list items */
+/* Specifically disable any 'before' elements creating the green tick */
 .expertise-list li::before {
-    content: "○";
-    position: absolute;
-    left: 0;
-    color: #a0aec0;
-    font-weight: bold;
+    content: none !important; 
+    display: none !important;
 }
 
 .btn-quote {
@@ -1706,3 +1706,73 @@ body {
         font-size: 0.85rem; /* Slightly smaller text for mobile */
     }
 }
+
+
+
+/* This applies only to mobile devices */
+@media screen and (max-width: 768px) {
+    /* Force the success section to stack vertically */
+    .achievements-box {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .achieve-item {
+        width: 100% !important;
+        border-right: none !important; /* Remove desktop separators */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+    }
+
+    /* Fix for the 'ticks' overlapping first letters */
+    .expertise-list li {
+        padding-left: 30px !important;
+        position: relative;
+    }
+}
+
+
+
+
+
+/* Hamburger Styling */
+.hamburger {
+    display: none; /* Hidden on computer */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger { display: flex; } /* Show on mobile */
+
+    .nav-links {
+        display: none; /* Hide standard links on mobile */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #030712; /* Match your navy background */
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* When the menu is open */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+

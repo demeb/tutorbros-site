@@ -15,14 +15,38 @@
 <body class="about-page">
 
     <nav class="navbar">
+
+
+
+
+
+
         <a href="index.html" style="text-decoration: none;">
     <div class="logo">
         <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
     </div>
 </a>
+
+
+
+            <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+
+
+
+
+
+
+
+
         <ul class="nav-links">
             <li><a href="index.html">მთავარი</a></li>
-            <li><a href="about.html" class="active">ჩვენს შესახებ</a></li>
+            <li><a href="about.html" class="active">ჩვენ შესახებ</a></li>
              <li><a href="pricing.html">ფასი</a></li>
 
             <li><a href="contact.html" class="btn-nav">დაჯავშნე ახლავე</a></li>
@@ -183,6 +207,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
+
+
+
+
+
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+
 
 
 </body>

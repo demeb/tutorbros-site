@@ -17,11 +17,21 @@
     <nav class="navbar">
 
 
+
+
         <a href="index.html" style="text-decoration: none;">
     <div class="logo">
         <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
     </div>
 </a>
+
+        <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -36,6 +46,13 @@
     <span class="divider">|</span>
     <a href="ka/index.html" class="lang-btn">🇬🇪 GE</a>
         </li>
+
+
+
+
+
+
+
 
 
 
@@ -259,6 +276,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
+
+
+
+
+
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
 
 
 
