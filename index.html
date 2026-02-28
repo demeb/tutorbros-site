@@ -15,50 +15,34 @@
 <body>
 
     <nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
+            </div>
+        </a>
 
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
 
-
-
-        <a href="index.html" style="text-decoration: none;">
-    <div class="logo">
-        <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
+        <div class="nav-menu-wrapper" id="nav-wrapper">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html" class="btn-nav">Book Now</a></li>
+            </ul>
+            <div class="lang-switcher">
+    <a href="../index.html" class="lang-btn">EN</a>
+    <span>|</span>
+    <a href="index.html" class="lang-btn">GE</a>
+</div>
+        </div>
     </div>
-</a>
-
-        <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="contact.html" class="btn-nav">Book Now</a></li>
-        </ul>
-
-
-
-        <li class="lang-switch">
-    <a href="index.html" class="lang-btn active">🇺🇸 EN</a>
-    <span class="divider">|</span>
-    <a href="ka/index.html" class="lang-btn">🇬🇪 GE</a>
-        </li>
-
-
-
-
-
-
-
-
-
-
-
-
-    </nav>
+</nav>
 
     <header class="hero-premium">
     <div class="hero-overlay"></div>
@@ -169,42 +153,37 @@
         </div>
     </div>
 </section>
+
+
     <section id="achievements" class="container py-20">
     <h2 class="section-title">🏆 Our Students' Success</h2>
     
-    <div class="success-grid">
-        <div class="success-card">
-            <div class="success-header">
-                <h3>🌍 International Olympiads</h3>
-            </div>
-            <ul class="success-list">
+    <div class="achievements-box">
+        <div class="achieve-item">
+            <h3 class="blue-title">🌎 International Olympiads</h3>
+            <ul class="achieve-list">
                 <li>🥈 <strong>IYPT:</strong> 2 Silver, 1 Bronze Medals</li>
                 <li>🥉 <strong>IPHO:</strong> Bronze Medalist</li>
                 <li>🥈 <strong>EuPhO:</strong> Silver & Bronze Medalists</li>
             </ul>
         </div>
 
-        <div class="success-card">
-            <div class="success-header">
-                <h3>📝 Standardized Tests (SAT/AP)</h3>
-            </div>
-            <ul class="success-list">
-                <li>🎯 <strong>SAT Math:</strong> 1x 800, 4x 790, 5x 750+</li>
-                <li>🧪 <strong>AP Physics:</strong> 4x Scores of 5 (1 & C)</li>
-                <li>📐 <strong>AP Calculus:</strong> 4x Fives, 7x Fours (AB/BC)</li>
+        <div class="achieve-item">
+            <h3 class="blue-title">📝 Standardized Tests (SAT/AP)</h3>
+            <ul class="achieve-list">
+                <li>🎯 <strong>SAT Math:</strong> 1× 800, 4× 790, 5× 750+</li>
+                <li>🧪 <strong>AP Physics:</strong> 4× Scores of 5 (1 & C)</li>
+                <li>📐 <strong>AP Calculus:</strong> 4× Fives, 7× Fours (AB/BC)</li>
             </ul>
         </div>
 
-        <div class="success-card">
-            <div class="success-header">
-                <h3>🎓 University Admissions</h3>
-            </div>
-            <ul class="success-list">
-                <li>✅ Student admitted to <strong>Brown University</strong></li>
-                <li>✅ Student admitted to <strong>Cornell University</strong></li>
-                <li>✅ Student admitted to <strong>Columbia University</strong></li>
-                <li>✅ Student admitted to <strong>University of Pennsylvania</strong></li>
-
+        <div class="achieve-item">
+            <h3 class="blue-title">🎓 University Admissions</h3>
+            <ul class="achieve-list">
+                <li>✅ Brown University</li>
+                <li>✅ Cornell University</li>
+                <li>✅ Columbia University</li>
+                <li>✅ University of Pennsylvania</li>
             </ul>
         </div>
     </div>
@@ -283,11 +262,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const navWrapper = document.querySelector('#nav-wrapper');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+    mobileMenu.addEventListener('click', () => {
+        // Toggle the 'active' class to show the list
+        navWrapper.classList.toggle('active');
+        // Optional: animate the hamburger to an X
+        mobileMenu.classList.toggle('is-active');
     });
 </script>
 

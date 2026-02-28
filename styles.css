@@ -1800,3 +1800,200 @@ body {
         border-bottom: none;
     }
 }
+
+
+
+
+/* --- UNIVERSAL NAVBAR --- */
+.navbar {
+    background: #030712;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative; /* Changed from fixed to not cover text */
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Logo left, Menu right */
+    align-items: center;
+    padding: 0 5%;
+}
+
+.nav-menu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.lang-switcher {
+    color: #63b3ed;
+    font-weight: bold;
+}
+
+.menu-toggle { display: none; cursor: pointer; }
+
+/* --- MOBILE SPECIFIC (Phone) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Shows hamburger only on phone */
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .nav-menu-wrapper {
+        display: none; /* Hidden on start in mobile */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0a192f;
+        flex-direction: column;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* This makes the list appear when you click */
+    .nav-menu-wrapper.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* --- SUCCESS SECTION DESIGN --- */
+#achievements {
+    background-color: #030712; /* Deep midnight background */
+    text-align: center;
+}
+
+.blue-title {
+    color: #3182ce !important; /* The signature blue from your logo */
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.achievements-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.achieve-item {
+    background: rgba(17, 24, 39, 0.7); /* Translucent glass look */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.achieve-item:hover {
+    transform: translateY(-5px);
+    border-color: #3182ce;
+}
+
+.achieve-list {
+    list-style: none;
+    padding: 0;
+}
+
+.achieve-list li {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+/* --- THE MOBILE FIX --- */
+@media screen and (max-width: 768px) {
+    .achievements-box {
+        flex-direction: column !important; /* Stacks items vertically */
+    }
+
+    .achieve-item {
+        width: 100% !important; /* Full width on phone */
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* --- THE NAVY THEME UPDATE --- */
+body, .home-dark-theme {
+    /* A deep navy gradient instead of black */
+    background: radial-gradient(circle at top, #0a192f 0%, #020c1b 100%) !important;
+    color: #ffffff;
+}
+
+/* Ensure all middle sections use this navy color */
+#why-us, #specializations, #achievements, .bg-light {
+    background-color: transparent !important; /* Let the body gradient show through */
+}
+
+/* Updated Glass Cards for Navy Background */
+.card, .expertise-card, .achieve-item {
+    background: rgba(255, 255, 255, 0.03) !important; /* Very subtle light tint */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Make the blue titles slightly brighter to stand out against navy */
+.blue-title, .logo-accent, .accent-text {
+    color: #4dabf7 !important; 
+}
+
+
+
+/* Add a glowing effect to the Success items */
+.achieve-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.achieve-item::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(77, 171, 247, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}

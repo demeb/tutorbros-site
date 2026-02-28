@@ -15,53 +15,34 @@
 <body class="about-page">
 
     <nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
+            </div>
+        </a>
 
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
 
-
-
-
-
-        <a href="index.html" style="text-decoration: none;">
-    <div class="logo">
-        <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
+        <div class="nav-menu-wrapper" id="nav-wrapper">
+            <ul class="nav-links">
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="about.html">ჩვენ შესახებ</a></li>
+                <li><a href="pricing.html">ფასი</a></li>
+                <li><a href="contact.html" class="btn-nav">დაჯავშნე ახლავე</a></li>
+            </ul>
+            <div class="lang-switcher">
+    <a href="../index.html" class="lang-btn">EN</a>
+    <span>|</span>
+    <a href="index.html" class="lang-btn">GE</a>
+</div>
+        </div>
     </div>
-</a>
-
-
-
-            <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-
-
-
-
-
-
-
-
-
-        <ul class="nav-links">
-            <li><a href="index.html">მთავარი</a></li>
-            <li><a href="about.html" class="active">ჩვენ შესახებ</a></li>
-             <li><a href="pricing.html">ფასი</a></li>
-
-            <li><a href="contact.html" class="btn-nav">დაჯავშნე ახლავე</a></li>
-        </ul>
-
-
-
-        <li class="lang-switch">
-            <a href="../index.html" class="lang-btn">🇺🇸 EN</a>
-            <span class="divider">|</span>
-            <a href="index.html" class="lang-btn active">🇬🇪 GE</a>
-        </li>
-
-
-    </nav>
+</nav>
 
     <section class="about-hero">
         <div class="container">
@@ -214,11 +195,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const navWrapper = document.querySelector('#nav-wrapper');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+    mobileMenu.addEventListener('click', () => {
+        // Toggle the 'active' class to show the list
+        navWrapper.classList.toggle('active');
+        // Optional: animate the hamburger to an X
+        mobileMenu.classList.toggle('is-active');
     });
 </script>
 
