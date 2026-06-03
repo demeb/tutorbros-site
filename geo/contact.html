@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <head>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <title>TutorBros</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-navy-full">
+
+   <nav class="navbar sticky-nav">
+    <div class="nav-container modern-nav-container">
+        
+        <!-- 1. The Logo (Always on the Left) -->
+        <a href="index.html" class="logo-minimal-premium">
+            <img src="../images/favicon.png" alt="TB Crest" class="minimal-crest">
+            <div class="minimal-text-group">
+                <span class="text-tutor">Tutor</span><span class="text-bros">Bros</span>
+            </div>
+        </a>
+
+        <!-- 2. The 3-Line Hamburger Button (Visible only on Mobile) -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <!-- 3. The New Wrapper (Horizontal on Laptop, Drawer on Mobile) -->
+        <div class="nav-menu-wrapper">
+            
+            <div class="nav-links-container">
+                <a href="index.html" class="nav-link">მთავარი</a>
+                <a href="about.html" class="nav-link">ჩვენ შესახებ</a>
+                <a href="pricing.html" class="nav-link">ფასები</a>
+                <a href="find-teacher.html" class="nav-link">მოძებნე მასწავლებელი</a>
+            </div>
+            
+            <div class="nav-controls">
+                <a href="../index.html" class="modern-lang" title="Switch to Georgian">
+                    <i class="fas fa-globe"></i>
+                    <span>ENG</span>
+                </a>
+                <div id="user-menu"></div>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+    <section class="contact-container container py-20">
+        <div class="contact-grid">
+            
+            <div class="contact-info">
+                <h1>დაიწყეთ თქვენი გზა!</h1>
+                <p>მზად ხართ შემდეგი ნაბიჯის გადასადგმელად? დაგვიკავშირდით კონსულტაციისთვის. მოდით განვიხილოთ თქვენი მიზნები და გავარკვიოთ, თუ როგორ შეიძლება ჩვენმა რეპეტიტორობამ წარმატებისკენ მიგიყვანოთ.</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>tutorbrothers1@gmail.com</span>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+995 579 10 10 83 <br> +39 327 9016581</span>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/demetrebzekalava" target="_blank"><i class="fab fa-linkedin"></i> დემეტრე</a>
+                    <a href="https://linkedin.com/in/beqa-bzekalava-74254a222" target="_blank"><i class="fab fa-linkedin"></i> ბექა</a>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+    <form id="booking-form">
+        
+        <div class="form-group">
+            <label>მასწავლებლის სახელი</label>
+            <input type="text" id="teacher-name" name="name" placeholder="Enter teacher's name" required>
+        </div>
+
+        <div class="form-group">
+            <label>ამოირჩიეთ საგანი</label>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="SAT">SAT/PSAT</option>
+                <option value="Olympiad Physics">Olympiad Physics</option>
+                <option value="Calculus">Calculus</option>
+                <option value="AP Physics">AP Physics</option>
+                <option value="AP Mathematics">AP Mathematics</option>
+                <option value="High School Mathematics">High School Mathematics</option>
+                <option value="High School Physics">High School Physics</option>
+                <option value="Middle School Mathematics">Middle School Mathematics</option>
+                <option value="C++/Algorithms">C++/Algorithms</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>ელ. ფოსტა</label>
+            <input type="email" name="email" placeholder="student@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label>ტელეფონის ნომერი (არასავალდებულო)</label>
+            <input type="tel" name="phone" placeholder="+995 555 123 456">
+        </div>
+
+        <div class="form-group">
+            <label>დამატებითი ინფორმაცია</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your goals..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">გააგზავნეთ მესიჯი</button>
+    </form>
+</div>
+
+        </div>
+    </section>
+
+
+
+
+
+<footer class="footer-cta">
+    <div class="container footer-grid">
+        
+        <div class="footer-message">
+            <h2>დაიწყეთ თქვენი გზა!</h2>
+            <p>გმადლობთ რომ გვეწვიეთ <strong>ძმების ტუტორობის საიტზე</strong>. ჩვენ მოხარულები ვართ, რომ თქვენი საგანმანათლებლო მოგზაურობის ნაწილი ვართ. თუ გსურთ მათემატიკასა და ფიზიკაში წარმატების მიღწევა, საერთაშორისო ტესტებში მაქსიმალური ქულების მიღება თუ ოლიმპიადაზე წარმატების მიღწევა, ჩვენ აქ ვართ, რომ დაგეხმაროთ.</p>
+            <p>მზად ხართ შემდეგი ნაბიჯის გადასადგმელად? დაგვიკავშირდით დღესვე კონსულტაციისთვის. მოდით განვიხილოთ თქვენი მიზნები და გავარკვიოთ, თუ როგორ შეიძლება ჩვენმა რეპეტიტორობამ წარმატებისკენ მიგიყვანოთ.</p>
+            <a href="contact.html" class="btn-primary">დაჯავშნე კონსულტაცია</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>სწრაფი ბმულები</h3>
+            <ul>
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="about.html">ჩვენ შესახებ</a></li>
+                <li><a href="pricing.html">ფასები</a></li>
+                <li><a href="contact.html">დაჯავშნე გაკვეთილი</a></li>
+                <li><a href="https://www.youtube.com/@TutorBrothers" target="_blank">YouTube გვერდი</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-graphics">
+            <div class="icon-cloud">
+                <i class="fas fa-calculator"></i>
+                <i class="fas fa-atom"></i>
+                <i class="fas fa-code"></i>
+                <i class="fas fa-microchip"></i>
+                <i class="fas fa-brain"></i>
+                <i class="fas fa-terminal"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Bzekalava Brothers Tutoring Hub. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    
+    // 1. Save language choice when a flag is clicked
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const isGE = this.innerText.includes('GE');
+            localStorage.setItem('tutorBrosLang', isGE ? 'ka' : 'en');
+        });
+    });
+
+    // 2. Logic to keep the user in their preferred language
+    const savedLang = localStorage.getItem('tutorBrosLang');
+    const onGeorgianPage = path.includes('/ka/');
+
+    if (savedLang === 'ka' && !onGeorgianPage) {
+        // If they want Georgian but are on English page, move them to GE version
+        // We check if it's the home page or a subpage
+        const pageName = path.split("/").pop() || "index.html";
+        window.location.href = "ka/" + pageName;
+    }
+});
+</script>
+
+
+
+
+
+<script>
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const navWrapper = document.querySelector('#nav-wrapper');
+
+    mobileMenu.addEventListener('click', () => {
+        // Toggle the 'active' class to show the list
+        navWrapper.classList.toggle('active');
+        // Optional: animate the hamburger to an X
+        mobileMenu.classList.toggle('is-active');
+    });
+</script>
+
+
+
+<script type="module" src="../auth-logic.js"></script>
+
+
+
+
+
+
+
+    
+    <div class="floating-support">
+        <a href="https://wa.me/995579101083" target="_blank" class="support-btn whatsapp-btn" title="Message us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tutorbrothers1@gmail.com&su=TutorBros+Support+Request" target="_blank" class="support-btn email-btn" title="Email TutorBros Support">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+
+
+    
+<script>
+    const mobileBtn = document.querySelector('.mobile-nav-toggle');
+    const mobileDrawer = document.querySelector('.nav-menu-wrapper');
+
+    // Make sure the button actually exists on the page before running the code
+    if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+            mobileBtn.classList.toggle('active');
+            mobileDrawer.classList.toggle('active');
+        });
+
+        // Close the drawer automatically if a user clicks a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                mobileDrawer.classList.remove('active');
+            });
+        });
+    }
+</script>
+    
+
+</body>
+</html>

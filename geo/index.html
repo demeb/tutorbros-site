@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <head>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <title>TutorBros</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar sticky-nav">
+    <div class="nav-container modern-nav-container">
+        
+        <!-- 1. The Logo (Always on the Left) -->
+        <a href="index.html" class="logo-minimal-premium">
+            <img src="../images/favicon.png" alt="TB Crest" class="minimal-crest">
+            <div class="minimal-text-group">
+                <span class="text-tutor">Tutor</span><span class="text-bros">Bros</span>
+            </div>
+        </a>
+
+        <!-- 2. The 3-Line Hamburger Button (Visible only on Mobile) -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <!-- 3. The New Wrapper (Horizontal on Laptop, Drawer on Mobile) -->
+        <div class="nav-menu-wrapper">
+            
+            <div class="nav-links-container">
+                <a href="index.html" class="nav-link">მთავარი</a>
+                <a href="about.html" class="nav-link">ჩვენ შესახებ</a>
+                <a href="pricing.html" class="nav-link">ფასები</a>
+                <a href="find-teacher.html" class="nav-link">მოძებნე მასწავლებელი</a>
+            </div>
+            
+            <div class="nav-controls">
+                <a href="../index.html" class="modern-lang" title="Switch to Georgian">
+                    <i class="fas fa-globe"></i>
+                    <span>ENG</span>
+                </a>
+                <div id="user-menu"></div>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+    <div class="hero-split-container" style="position: relative; z-index: 10; padding: 100px 5%; max-width: 1300px; margin: 0 auto; display: flex; align-items: center; min-height: 80vh;">
+        
+        <div class="hero-left-col" style="flex: 1.2;" data-aos="fade-right" data-aos-duration="1000">
+            <div class="editorial-accent-wrapper">
+                
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span> STEM მენტორობის პლატფორმა
+                </div>
+
+                <h1 class="hero-headline">
+                    
+                    შეისწავლეთ <span class="text-gradient-primary">მეცნიერება </span>
+                </h1>
+
+                <p class="hero-subheadline">
+                     ჩვენ ვამარტივებთ უმაღლესი დონის მათემატიკასა და ფიზიკას იმ სტუდენტებისთვის, რომელთაც სურთ ლიდერობა.
+                </p>
+
+                <div class="hero-cta-group" style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
+    
+    <a href="find-teacher.html" class="btn-hero-primary">მოძებნე მასწავლებელი</a>
+    
+    <a href="https://www.youtube.com/@TutorBrothers" class="btn-hero-secondary">
+        <i class="fas fa-play-circle" style="margin-right: 8px;"></i> ჩვენი Youtube
+    </a>
+
+</div>
+            </div>
+        </div>
+
+        <div class="hero-right-col" style="flex: 1; display: flex; justify-content: flex-end;" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            
+            <div class="glass-bento-box">
+    
+    <div class="bento-header">
+        <img src="../images/favicon.png" alt="TB Logo" class="bento-logo-large">
+        
+        <span class="bento-status">
+            <span class="pulse-dot-green"></span> ცოცხალი_სასწავლო გეგმა
+        </span>
+    </div>
+    
+    <div class="bento-body">
+        <h3 id="dynamic-text" class="dynamic-subject">AP Physics C</h3>
+        
+        <p id="dynamic-equation" class="dynamic-equation">∮ E · dA = Q/ε₀</p>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+
+
+
+    
+        <section style="padding: 100px 5%; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="zigzag-row">
+            <div class="zigzag-text" data-aos="fade-right">
+                <div class="accent-line"></div>
+                <h3 class="section-subtitle">გამოცდილება</h3>
+                <h2 class="section-title-left">გამოცდილება ხვდება უკეთესად გაგებას</h2>
+                <p>10-წლიანი სწავლების გამოცდილებით, ჩვენ საკლასო ოთახისგან შორს არ ვართ. ჩვენ გვესმის თანამედროვე სტუდენტების წინაშე არსებული ზეწოლა, რაც საშუალებას გვაძლევს, რეალური თანაგრძნობა დადასტურებულ სწავლების მეთოდებს შევათავსოთ.</p>
+            </div>
+            <div class="zigzag-visual" data-aos="fade-left">
+                <div class="glass-orb">
+                    <i class="fas fa-atom" style="font-size: 5rem; color: #a78bfa;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="zigzag-row reverse-row">
+            <div class="zigzag-text" data-aos="fade-left">
+                <div class="accent-line"></div>
+                <h3 class="section-subtitle">ადაპტირება</h3>
+                <h2 class="section-title-left">მოქნილი და ხელმისაწვდომი</h2>
+                <p>ისწავლეთ ნებისმიერი ადგილიდან მოქნილი ონლაინ გაკვეთილებით, რომლებიც ხელმისაწვდომია როგორც ჯგუფურ, ასევე ინდივიდუალურ ფორმატში. ჩვენ ვერგებით თითოეული სტუდენტის გრაფიკს, მიზნებსა და სასურველ სწავლის სტილს.</p>            </div>
+            <div class="zigzag-visual" data-aos="fade-right" data-aos-delay="200">
+                <div class="glass-orb">
+                    <i class="fas fa-rocket" style="font-size: 5rem; color: #6366f1;"></i>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="zigzag-row">
+            <div class="zigzag-text" data-aos="fade-right">
+                <div class="accent-line"></div>
+                <h3 class="section-subtitle">პერსონალიზაცია</h3>
+                <h2 class="section-title-left">დიფერენციალური სწავლება</h2>
+                <p>დიფერენციალური სწავლება ნიშნავს, რომ ყველა სტუდენტი განსხვავებულად სწავლობს. ჩვენ ვქმნით პერსონალიზებულ სასწავლო გეგმებს, რომლებიც მორგებულია თითოეული მოსწავლის ძლიერ მხარეებზე, ტემპსა და მიზნებზე, რაც უზრუნველყოფს უფრო ეფექტურ პროგრესს, უფრო ღრმა გაგებას და სპეციალურად მათი წარმატებისთვის შექმნილ სასწავლო გამოცდილებას.</p>            </div>
+            <div class="zigzag-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="glass-orb" style="box-shadow: 0 0 40px rgba(56, 189, 248, 0.1);">
+                    <i class="fas fa-laptop-code" style="font-size: 5rem; color: #38bdf8;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 100px 5%; max-width: 1200px; margin: 0 auto;" data-aos="fade-up">
+        
+        <h2 class="section-title">რას ვასწავლით? </h2>
+        <div class="accent-line" style="margin: 0 auto 60px auto;"></div>
+
+        <div class="focus-stage-container">
+            
+            <div class="focus-menu">
+                <h3 class="focus-item active" data-target="panel-math">მათემატიკა</h3>
+                <h3 class="focus-item" data-target="panel-cs">კომპიუტერული მეცნიერება</h3>
+                <h3 class="focus-item" data-target="panel-physics">ფიზიკა</h3>
+            </div>
+
+            <div class="focus-panels">
+                
+                <div class="glass-panel active-panel" id="panel-math">
+                    <div class="panel-watermark"><i class="fas fa-square-root-variable"></i></div>
+                    <div class="panel-content">
+                        <h4>მათემატიკის სასწავლო გეგმა</h4>
+                        <ul>
+                            <li>Algebra 1 & 2</li>
+                            <li>Calculus AB, BC, I, II, III, IV</li>
+                            <li>Geometry & Trigonometry</li>
+                            <li>Differential Equations</li>
+                            <li>Linear Algebra</li>
+                            <li>SAT / PSAT Math</li>
+                        </ul>
+                        <a href="contact.html" class="btn-modern-auth" style="margin-top: 20px; display: inline-block;">დაჯავშნე გაკვეთილი</a>
+                    </div>
+                </div>
+
+                <div class="glass-panel" id="panel-cs">
+                    <div class="panel-watermark"><i class="fas fa-code"></i></div>
+                    <div class="panel-content">
+                        <h4>კომპიუტერული მეცნიერების სასწავლო გეგმა</h4>
+                        <ul>
+                            <li>C++</li>
+                            <li>Olympiad Informatics</li>
+                            <li>Algorithms & Data Structures</li>
+                            <li>Number Theory</li>
+                            <li>Dynamic Programming</li>
+                            <li>String Algorithms</li>
+                        </ul>
+                        <a href="contact.html" class="btn-modern-auth" style="margin-top: 20px; display: inline-block;">დაჯავშნე გაკვეთილი</a>
+                    </div>
+                </div>
+
+                <div class="glass-panel" id="panel-physics">
+                    <div class="panel-watermark"><i class="fas fa-atom"></i></div>
+                    <div class="panel-content">
+                        <h4>ფიზიკის სასწავლო გეგმა</h4>
+                        <ul>
+                            <li>AP Physics 1</li>
+                            <li>AP Physics C: Mechanics</li>
+                            <li>AP Physics C: Electricity & Magnetism</li>
+                            <li>IPHO (International Physics Olympiad)</li>
+                            <li>DP Physics</li>
+                        </ul>
+                        <a href="contact.html" class="btn-modern-auth" style="margin-top: 20px; display: inline-block;">დაჯავშნე გაკვეთილი</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- === PROVEN RESULTS (BENTO GRID) === -->
+    <section style="padding: 100px 5%; max-width: 1200px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 60px;" data-aos="fade-down">
+            <h3 class="section-subtitle">სტუდენტები</h3>
+            <h2 class="section-title">ჩვენი სტუდენტების წარმატება</h2>
+            <div class="accent-line" style="margin: 0 auto;"></div>
+        </div>
+
+        <div class="bento-grid">
+            
+            <!-- BENTO ITEM 1: STANDARDIZED TESTS (Large Highlight) -->
+            <div class="bento-box" data-aos="zoom-in" data-aos-delay="0">
+                <div class="bento-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>საერთაშორისო ტესტები</h3>
+                
+                <div class="stat-item">
+                    <span class="stat-number">800</span>
+                    <span class="stat-label">SAT მათემატიკის შედეგები</span>
+                    <span class="stat-sub">Plus 4x 790 & 5x 750+</span>
+                </div>
+                
+                <div class="stat-divider"></div>
+                
+                <div class="stat-row">
+                    <div class="stat-mini">
+                        <span class="mini-num">4x</span>
+                        <span class="mini-text">AP Physics<br>მიღებული ქულა 5</span>
+                    </div>
+                    <div class="stat-mini">
+                        <span class="mini-num">4x</span>
+                        <span class="mini-text">AP Calculus<br>მიღებული ქულა 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BENTO ITEM 2: OLYMPIADS (Updated Medals) -->
+            <div class="bento-box" data-aos="zoom-in" data-aos-delay="150">
+                <div class="bento-icon" style="color: #38bdf8;"><i class="fas fa-medal"></i></div>
+                <h3>საერთაშორისო ოლიმპიადები</h3>
+                
+                <ul class="bento-list">
+                    <li>
+                        <strong>IYPT</strong>
+                        <span class="medal-text">🥈 2 ვერცხლი, 🥉 1 ბრინჯაო</span>
+                    </li>
+                    <li>
+                        <strong>EuPhO</strong>
+                        <span class="medal-text">🥈 ვერცხლი, 🥉 ბრინჯაო</span>
+                    </li>
+                    <li>
+                        <strong>IPHO</strong>
+                        <span class="medal-text">🥉 ბრინჯაოს მედალი</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BENTO ITEM 3: UNIVERSITY ADMISSIONS (Redesigned) -->
+            <div class="bento-box bento-uni" data-aos="fade-up" data-aos-delay="300">
+                <div class="uni-content">
+                    <h3>🎓 უნივერსიტეტებში ჩარიცხვები</h3>
+                    <p>ჩვენი სტუდენტები არიან  მსოფლიოს ყველაზე კონკურენტუნარიან IVY ლიგის უმაღლეს სასწავლებლებში.</p>
+                </div>
+                
+                <!-- The New Prestigious Grid Layout -->
+                <div class="uni-grid">
+                    <div class="uni-item">ბრაუნის უნივერსიტეტი</div>
+                    <div class="uni-item">კორნელის უნივერსიტეტი</div>
+                    <div class="uni-item">კოლუმბიის უნივერსიტეტი</div>
+                    <div class="uni-item">პენსილვანიის უნივერსიტეტი</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+<footer class="footer-cta">
+    <div class="container footer-grid">
+        
+        <div class="footer-message">
+            <h2>დაიწყეთ თქვენი გზა!</h2>
+            <p>გმადლობთ რომ გვეწვიეთ <strong>ძმების ტუტორობის საიტზე</strong>. ჩვენ მოხარულები ვართ, რომ თქვენი საგანმანათლებლო მოგზაურობის ნაწილი ვართ. თუ გსურთ მათემატიკასა და ფიზიკაში წარმატების მიღწევა, საერთაშორისო ტესტებში მაქსიმალური ქულების მიღება თუ ოლიმპიადაზე წარმატების მიღწევა, ჩვენ აქ ვართ, რომ დაგეხმაროთ.</p>
+            <p>მზად ხართ შემდეგი ნაბიჯის გადასადგმელად? დაგვიკავშირდით დღესვე კონსულტაციისთვის. მოდით განვიხილოთ თქვენი მიზნები და გავარკვიოთ, თუ როგორ შეიძლება ჩვენმა რეპეტიტორობამ წარმატებისკენ მიგიყვანოთ.</p>
+            <a href="contact.html" class="btn-primary">დაჯავშნე კონსულტაცია</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>სწრაფი ბმულები</h3>
+            <ul>
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="about.html">ჩვენ შესახებ</a></li>
+                <li><a href="pricing.html">ფასები</a></li>
+                <li><a href="contact.html">დაჯავშნე გაკვეთილი</a></li>
+                <li><a href="https://www.youtube.com/@TutorBrothers" target="_blank">YouTube გვერდი</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-graphics">
+            <div class="icon-cloud">
+                <i class="fas fa-calculator"></i>
+                <i class="fas fa-atom"></i>
+                <i class="fas fa-code"></i>
+                <i class="fas fa-microchip"></i>
+                <i class="fas fa-brain"></i>
+                <i class="fas fa-terminal"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Bzekalava Brothers Tutoring Hub. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    
+    // 1. Save language choice when a flag is clicked
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const isGE = this.innerText.includes('GE');
+            localStorage.setItem('tutorBrosLang', isGE ? 'ka' : 'en');
+        });
+    });
+
+    // 2. Logic to keep the user in their preferred language
+    const savedLang = localStorage.getItem('tutorBrosLang');
+    const onGeorgianPage = path.includes('/ka/');
+
+    if (savedLang === 'ka' && !onGeorgianPage) {
+        // If they want Georgian but are on English page, move them to GE version
+        // We check if it's the home page or a subpage
+        const pageName = path.split("/").pop() || "index.html";
+        window.location.href = "ka/" + pageName;
+    }
+});
+</script>
+
+
+
+
+
+
+<script>
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const navWrapper = document.querySelector('#nav-wrapper');
+
+    // SAFETY CHECK: Only run this if the mobile menu button actually exists!
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            // Toggle the 'active' class to show the list
+            navWrapper.classList.toggle('active');
+            // Optional: animate the hamburger to an X
+            mobileMenu.classList.toggle('is-active');
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<script>
+    // --- THE FOCUS STAGE ENGINE ---
+    const menuItems = document.querySelectorAll('.focus-item');
+    const panels = document.querySelectorAll('.glass-panel');
+
+    // For every menu item...
+    menuItems.forEach(item => {
+        // When the mouse enters the word...
+        item.addEventListener('mouseenter', () => {
+            
+            // 1. Remove the active color from all words
+            menuItems.forEach(nav => nav.classList.remove('active'));
+            
+            // 2. Hide all the glass panels
+            panels.forEach(panel => panel.classList.remove('active-panel'));
+
+            // 3. Highlight the word we are hovering over
+            item.classList.add('active');
+
+            // 4. Find the matching panel and show it!
+            const targetId = item.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active-panel');
+        });
+    });
+</script>
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize the Scroll Animations!
+    AOS.init({
+        duration: 800, // How long the animation takes (in ms)
+        once: true, // Whether animation should happen only once - while scrolling down
+        offset: 100 // Offset (in px) from the original trigger point
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <script src="../particles-config.js"></script>
+
+    <script type="module" src="../auth-logic.js"></script>
+
+
+
+
+    <div class="floating-support">
+        <a href="https://wa.me/995579101083" target="_blank" class="support-btn whatsapp-btn" title="Message us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tutorbrothers1@gmail.com&su=TutorBros+Support+Request" target="_blank" class="support-btn email-btn" title="Email TutorBros Support">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+
+<script>
+    // === DYNAMIC ACADEMIC ENGINE ===
+    // Pairs the subject with its actual mathematical or physical formula
+    const curriculum = [
+        { title: "AP Physics C", eq: "∮ E · dA = Q/ε₀" },
+        { title: "Kinematics", eq: "Δx = v₀t + ½at²" },
+        { title: "Calculus I-IV", eq: "f'(x) = lim(h→0) [f(x+h) - f(x)]/h" },
+        { title: "SAT Mathematics", eq: "ax² + bx + c = 0" },
+        { title: "Olympiad Logic", eq: "P(n) ⟹ P(n+1)" },
+        { title: "Advanced Algorithms", eq: "O(n log n)" }
+    ];
+    
+    const textElement = document.getElementById("dynamic-text");
+    const eqElement = document.getElementById("dynamic-equation");
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Fade both out
+        textElement.style.opacity = 0;
+        textElement.style.transform = "translateY(10px)";
+        eqElement.style.opacity = 0;
+        eqElement.style.transform = "translateY(10px)";
+
+        setTimeout(() => {
+            // Update both words
+            currentIndex = (currentIndex + 1) % curriculum.length;
+            textElement.innerText = curriculum[currentIndex].title;
+            eqElement.innerText = curriculum[currentIndex].eq;
+            
+            // Fade both in
+            textElement.style.opacity = 1;
+            textElement.style.transform = "translateY(0)";
+            eqElement.style.opacity = 1;
+            eqElement.style.transform = "translateY(0)";
+        }, 500); 
+
+    }, 2000); // Changes every 2 seconds
+</script>
+
+
+
+
+
+
+<script>
+    // === SMART ACTIVE NAV ENGINE ===
+    // 1. Get the exact URL the user is currently looking at
+    const currentLocation = window.location.href;
+    
+    // 2. Grab all the navigation links
+    const allNavLinks = document.querySelectorAll('.nav-link');
+    
+    // 3. Loop through them and find the match!
+    allNavLinks.forEach(link => {
+        // If the link's href exactly matches the current URL...
+        if (link.href === currentLocation) {
+            // Turn on the glowing blue line!
+            link.classList.add('active');
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+    const mobileBtn = document.querySelector('.mobile-nav-toggle');
+    const mobileDrawer = document.querySelector('.nav-menu-wrapper');
+
+    // Make sure the button actually exists on the page before running the code
+    if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+            mobileBtn.classList.toggle('active');
+            mobileDrawer.classList.toggle('active');
+        });
+
+        // Close the drawer automatically if a user clicks a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                mobileDrawer.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

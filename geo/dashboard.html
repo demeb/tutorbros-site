@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard | TutorBros</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-navy-full">
+
+    <nav class="navbar sticky-nav">
+    <div class="nav-container modern-nav-container">
+        
+        <!-- 1. The Logo (Always on the Left) -->
+        <a href="index.html" class="logo-minimal-premium">
+            <img src="../images/favicon.png" alt="TB Crest" class="minimal-crest">
+            <div class="minimal-text-group">
+                <span class="text-tutor">Tutor</span><span class="text-bros">Bros</span>
+            </div>
+        </a>
+
+        <!-- 2. The 3-Line Hamburger Button (Visible only on Mobile) -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <!-- 3. The New Wrapper (Horizontal on Laptop, Drawer on Mobile) -->
+        <div class="nav-menu-wrapper">
+            
+            <div class="nav-links-container">
+                <a href="index.html" class="nav-link">მთავარი</a>
+                <a href="about.html" class="nav-link">ჩვენ შესახებ</a>
+                <a href="pricing.html" class="nav-link">ფასები</a>
+                <a href="find-teacher.html" class="nav-link">მოძებნე მასწავლებელი</a>
+            </div>
+            
+            <div class="nav-controls">
+                <a href="../index.html" class="modern-lang" title="Switch to Georgian">
+                    <i class="fas fa-globe"></i>
+                    <span>ENG</span>
+                </a>
+                <div id="user-menu"></div>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+    <main class="tutor-directory-container" style="padding-top: 120px; display: block;">
+        
+        <div style="background-color: #1e293b; padding: 30px; border-radius: 12px; margin-bottom: 30px; border: 1px solid #334155;">
+            <h1 style="color: #fff; margin: 0 0 10px 0; font-size: 2rem;">
+                მოგესალმებით , <span id="student-name" style="color: #a78bfa;">...</span>! 👋
+            </h1>
+            <p style="color: #94a3b8; margin: 0;">აქ მოცემულია თქვენი დაჯავშნილი გაკვეთილები.</p>
+        </div>
+
+        <div class="dashboard-grid-container" style="display: flex; gap: 20px;">
+            
+            <div class="dashboard-lessons-box" style="flex: 2; background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155;">
+                <h3 style="color: #fff; margin-top: 0; border-bottom: 1px solid #334155; padding-bottom: 15px;">გაკვეთილების ცხრილი</h3>
+                <div id="lessons-container" style="color: #94a3b8; margin-top: 20px;">
+                    Loading your lessons...
+                </div>
+            </div>
+
+            <div class="dashboard-profile-box" style="flex: 1; background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; height: fit-content;">
+                <h3 style="color: #fff; margin-top: 0; border-bottom: 1px solid #334155; padding-bottom: 15px;">ჩემი პროფილი</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><strong>ელ.ფოსტა:</strong> <span id="student-email">...</span></p>
+                <p style="color: #94a3b8; font-size: 0.9rem;"><strong>ტელეფონი:</strong> <span id="student-phone">...</span></p>
+                
+                <button id="logout-dash-btn" style="width: 100%; background-color: transparent; border: 1px solid #ef4444; color: #ef4444; padding: 10px; border-radius: 8px; margin-top: 20px; cursor: pointer; transition: 0.2s;">
+                    Log Out
+                </button>
+            </div>
+            
+        </div>
+    </main>
+
+    <script type="module" src="../auth-logic.js"></script>
+    <script type="module" src="../dashboard-logic.js"></script>
+
+
+
+
+
+
+    
+    <div class="floating-support">
+        <a href="https://wa.me/995579101083" target="_blank" class="support-btn whatsapp-btn" title="Message us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tutorbrothers1@gmail.com&su=TutorBros+Support+Request" target="_blank" class="support-btn email-btn" title="Email TutorBros Support">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+
+<script>
+    const mobileBtn = document.querySelector('.mobile-nav-toggle');
+    const mobileDrawer = document.querySelector('.nav-menu-wrapper');
+
+    // Make sure the button actually exists on the page before running the code
+    if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+            mobileBtn.classList.toggle('active');
+            mobileDrawer.classList.toggle('active');
+        });
+
+        // Close the drawer automatically if a user clicks a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                mobileDrawer.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+
+
+</body>
+</html>

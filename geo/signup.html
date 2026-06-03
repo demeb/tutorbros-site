@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sign Up | TutorBros</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-navy-full">
+
+
+
+
+
+
+
+
+<nav class="navbar sticky-nav">
+    <div class="nav-container modern-nav-container">
+        
+        <!-- 1. The Logo (Always on the Left) -->
+        <a href="index.html" class="logo-minimal-premium">
+            <img src="../images/favicon.png" alt="TB Crest" class="minimal-crest">
+            <div class="minimal-text-group">
+                <span class="text-tutor">Tutor</span><span class="text-bros">Bros</span>
+            </div>
+        </a>
+
+        <!-- 2. The 3-Line Hamburger Button (Visible only on Mobile) -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <!-- 3. The New Wrapper (Horizontal on Laptop, Drawer on Mobile) -->
+        <div class="nav-menu-wrapper">
+            
+            <div class="nav-links-container">
+                <a href="index.html" class="nav-link">მთავარი</a>
+                <a href="about.html" class="nav-link">ჩვენ შესახებ</a>
+                <a href="pricing.html" class="nav-link">ფასები</a>
+                <a href="find-teacher.html" class="nav-link">მოძებნე მასწავლებელი</a>
+            </div>
+            
+            <div class="nav-controls">
+                <a href="../index.html" class="modern-lang" title="Switch to Georgian">
+                    <i class="fas fa-globe"></i>
+                    <span>ENG</span>
+                </a>
+                <div id="user-menu"></div>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+
+
+
+
+    <main class="auth-page-wrapper">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2>პროფილის შექმნა</h2>
+                <p>შემოგვიერთდით TutorBros-ში და დაიწყეთ ხარისხიანი სწავლა.</p>
+            </div>
+
+            <form id="signup-form" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">სახელი *</label>
+                        <input type="text" id="firstName" required placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">გვარი *</label>
+                        <input type="text" id="lastName" required placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">ელ.ფოსტა *</label>
+                    <input type="email" id="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">ტელეფონის ნომერი (არასავალდებულო)</label>
+                    <input type="tel" id="phone" placeholder="+995 555 12 34 56">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">პაროლი *</label>
+                    <input type="password" id="password" required placeholder="Create a strong password">
+                </div>
+
+                <button type="submit" class="auth-btn">რეგისტრაცია</button>
+            </form>
+
+            <div class="auth-footer" style="text-align: center; margin-top: 20px;">
+            <p style="color: #94a3b8; font-size: 0.95rem;">
+                უკვე გაქვს პროფილი? 
+                <a href="login.html" style="color: #a78bfa; font-weight: 600; text-decoration: none; transition: 0.2s;">შესვლა</a>
+            </p>
+        </div>
+        </div>
+    </main>
+
+    <!-- Add type="module" -->
+    <script type="module" src="../auth-logic.js"></script>
+    
+
+
+
+    <div class="floating-support">
+        <a href="https://wa.me/995579101083" target="_blank" class="support-btn whatsapp-btn" title="Message us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tutorbrothers1@gmail.com&su=TutorBros+Support+Request" target="_blank" class="support-btn email-btn" title="Email TutorBros Support">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+<script>
+    const mobileBtn = document.querySelector('.mobile-nav-toggle');
+    const mobileDrawer = document.querySelector('.nav-menu-wrapper');
+
+    // Make sure the button actually exists on the page before running the code
+    if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+            mobileBtn.classList.toggle('active');
+            mobileDrawer.classList.toggle('active');
+        });
+
+        // Close the drawer automatically if a user clicks a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                mobileDrawer.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+</body>
+</html>
