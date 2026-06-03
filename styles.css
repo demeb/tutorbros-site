@@ -4194,3 +4194,70 @@ body {
         box-sizing: border-box !important;
     }
 }
+
+
+
+/* =========================================
+   MOBILE HERO SECTION FIX (Georgian Layout)
+   ========================================= */
+
+@media (max-width: 991px) {
+    
+    /* 1. Stack the columns and fix the main container */
+    .hero-split-container {
+        flex-direction: column !important; /* Stacks text on top of the dynamic box */
+        padding-top: 120px !important;  /* Creates breathing room under the navbar */
+        padding-bottom: 50px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: center !important; /* Centers the text for a premium look */
+        min-height: auto !important;
+    }
+
+    /* Center the contents of the left column */
+    .hero-left-col {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-bottom: 40px !important;
+    }
+
+    /* 2. Shrink the "STEM მენტორობის..." badge */
+    .hero-badge {
+        font-size: 0.85rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 3. Scale down the massive "შეისწავლეთ მეცნიერება" heading */
+    .hero-headline {
+        font-size: 2.5rem !important; /* Dramatically reduces size for phone screens */
+        line-height: 1.15 !important; /* Pulls the text lines closer together */
+        margin-bottom: 20px !important;
+    }
+
+    /* 4. Tighten the description paragraph */
+    .hero-subheadline {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 30px !important;
+        max-width: 100% !important; 
+    }
+
+    /* 5. Stack the buttons perfectly */
+    .hero-cta-group {
+        display: flex !important;
+        flex-direction: column !important; /* Stacks the blue and dark buttons vertically */
+        gap: 15px !important; /* Space between the two buttons */
+        width: 100% !important;
+        max-width: 320px !important; /* Keeps them from getting too wide */
+        margin: 0 auto !important; 
+    }
+
+    /* Force the links inside the button group to take full width */
+    .hero-cta-group a {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        justify-content: center !important; /* Centers the text and icon inside */
+    }
+}
