@@ -8,39 +8,50 @@
 
 
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <title>Pricing & Booking | TutorBros</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <title>TutorBros</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="bg-light-blue">
 
-    <nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="logo-link">
-            <div class="logo">
-                <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
+    <nav class="navbar sticky-nav">
+    <div class="nav-container modern-nav-container">
+        
+        <!-- 1. The Logo (Always on the Left) -->
+        <a href="index.html" class="logo-minimal-premium">
+            <img src="images/favicon.png" alt="TB Crest" class="minimal-crest">
+            <div class="minimal-text-group">
+                <span class="text-tutor">Tutor</span><span class="text-bros">Bros</span>
             </div>
         </a>
 
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <!-- 2. The 3-Line Hamburger Button (Visible only on Mobile) -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <!-- 3. The New Wrapper (Horizontal on Laptop, Drawer on Mobile) -->
+        <div class="nav-menu-wrapper">
+            
+            <div class="nav-links-container">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="find-teacher.html" class="nav-link">Find a Teacher</a>
+            </div>
+            
+            <div class="nav-controls">
+                <a href="geo/index.html" class="modern-lang" title="Switch to Georgian">
+                    <i class="fas fa-globe"></i>
+                    <span>GEO</span>
+                </a>
+                <div id="user-menu"></div>
+            </div>
+
         </div>
 
-        <div class="nav-menu-wrapper" id="nav-wrapper">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html" class="btn-nav">Book Now</a></li>
-            </ul>
-            <div class="lang-switcher">
-    <a href="../index.html" class="lang-btn">EN</a>
-    <span>|</span>
-    <a href="index.html" class="lang-btn">GE</a>
-</div>
-        </div>
     </div>
 </nav>
 
@@ -185,6 +196,83 @@ document.addEventListener("DOMContentLoaded", function() {
         mobileMenu.classList.toggle('is-active');
     });
 </script>
+
+
+<script type="module" src="auth-logic.js"></script>
+
+
+
+
+
+   
+    <div class="floating-support">
+        <a href="https://wa.me/995579101083" target="_blank" class="support-btn whatsapp-btn" title="Message us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tutorbrothers1@gmail.com&su=TutorBros+Support+Request" target="_blank" class="support-btn email-btn" title="Email TutorBros Support">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+
+
+<script>
+    // === SMART ACTIVE NAV ENGINE ===
+    // 1. Get the exact URL the user is currently looking at
+    const currentLocation = window.location.href;
+    
+    // 2. Grab all the navigation links
+    const allNavLinks = document.querySelectorAll('.nav-link');
+    
+    // 3. Loop through them and find the match!
+    allNavLinks.forEach(link => {
+        // If the link's href exactly matches the current URL...
+        if (link.href === currentLocation) {
+            // Turn on the glowing blue line!
+            link.classList.add('active');
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const mobileBtn = document.querySelector('.mobile-nav-toggle');
+    const mobileDrawer = document.querySelector('.nav-menu-wrapper');
+
+    // Make sure the button actually exists on the page before running the code
+    if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+            mobileBtn.classList.toggle('active');
+            mobileDrawer.classList.toggle('active');
+        });
+
+        // Close the drawer automatically if a user clicks a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                mobileDrawer.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+
 
 
 </body>

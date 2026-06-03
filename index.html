@@ -4,6 +4,7 @@
 
     <head>
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
     <meta charset="UTF-8">
@@ -14,180 +15,292 @@
 </head>
 <body>
 
-    <nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="logo-link">
-            <div class="logo">
-                <span class="logo-text">Tutor<span class="logo-accent">Bros</span></span>
+    <nav class="navbar sticky-nav">
+    <div class="nav-container modern-nav-container">
+        
+        <!-- 1. The Logo (Always on the Left) -->
+        <a href="index.html" class="logo-minimal-premium">
+            <img src="images/favicon.png" alt="TB Crest" class="minimal-crest">
+            <div class="minimal-text-group">
+                <span class="text-tutor">Tutor</span><span class="text-bros">Bros</span>
             </div>
         </a>
 
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <!-- 2. The 3-Line Hamburger Button (Visible only on Mobile) -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <!-- 3. The New Wrapper (Horizontal on Laptop, Drawer on Mobile) -->
+        <div class="nav-menu-wrapper">
+            
+            <div class="nav-links-container">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="find-teacher.html" class="nav-link">Find a Teacher</a>
+            </div>
+            
+            <div class="nav-controls">
+                <a href="geo/index.html" class="modern-lang" title="Switch to Georgian">
+                    <i class="fas fa-globe"></i>
+                    <span>GEO</span>
+                </a>
+                <div id="user-menu"></div>
+            </div>
+
         </div>
 
-        <div class="nav-menu-wrapper" id="nav-wrapper">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html" class="btn-nav">Book Now</a></li>
-            </ul>
-            <div class="lang-switcher">
-    <a href="../index.html" class="lang-btn">EN</a>
-    <span>|</span>
-    <a href="index.html" class="lang-btn">GE</a>
-</div>
-        </div>
     </div>
 </nav>
 
-    <header class="hero-premium">
-    <div class="hero-overlay"></div>
-    <div class="container hero-container">
+    <div class="hero-split-container" style="position: relative; z-index: 10; padding: 100px 5%; max-width: 1300px; margin: 0 auto; display: flex; align-items: center; min-height: 80vh;">
         
-        <div class="hero-content-pro">
-            <span class="academy-tag"> Academic Mentorship</span>
-            <h1>Master Math with <br><span class="accent-text">Komarovi Graduates</span></h1>
-            <p>Direct from Georgia's most competitive physics-math school. We simplify Higher-level Mathematics and Physics for students who want to lead.</p>
-            
-            <div class="hero-actions">
-                <a href="about.html" class="btn-glow">Get Started</a>
-                <a href="https://www.youtube.com/@TutorBrothers" target="_blank" class="btn-outline-white">
-                    <i class="fab fa-youtube"></i> Watch Us Teach
-                </a>
+        <div class="hero-left-col" style="flex: 1.2;" data-aos="fade-right" data-aos-duration="1000">
+            <div class="editorial-accent-wrapper">
+                
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span> The Premier STEM Mentorship Platform
+                </div>
+
+                <h1 class="hero-headline">
+                    
+                    Master <span class="text-gradient-primary">the Science </span>
+                </h1>
+
+                <p class="hero-subheadline">
+                     We simplify Higher-level Mathematics and Physics for students who want to lead.
+                </p>
+
+                <div class="hero-cta-group" style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
+    
+    <a href="find-teacher.html" class="btn-hero-primary">Find Your Teacher</a>
+    
+    <a href="https://www.youtube.com/@TutorBrothers" class="btn-hero-secondary">
+        <i class="fas fa-play-circle" style="margin-right: 8px;"></i> Watch Us Teach
+    </a>
+
+</div>
             </div>
         </div>
 
-        <div class="hero-image-pro">
-    <div class="image-wrapper">
-        <img src="images/Physics and math photo.jpg" alt="Physics and Math Formulas">
+        <div class="hero-right-col" style="flex: 1; display: flex; justify-content: flex-end;" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            
+            <div class="glass-bento-box">
+    
+    <div class="bento-header">
+        <img src="images/favicon.png" alt="TB Logo" class="bento-logo-large">
         
-        
+        <span class="bento-status">
+            <span class="pulse-dot-green"></span> LIVE_CURRICULUM
+        </span>
     </div>
+    
+    <div class="bento-body">
+        <h3 id="dynamic-text" class="dynamic-subject">AP Physics C</h3>
+        
+        <p id="dynamic-equation" class="dynamic-equation">∮ E · dA = Q/ε₀</p>
+    </div>
+
 </div>
 
+        </div>
     </div>
-</header>
-        <section id="why-us" class="container py-20">
-        <h2 class="section-title">Why Choose Us?</h2>
-        <div class="grid-3">
-            <div class="card">
-                <div class="icon-circle"><i class="fas fa-award"></i></div>
-                <h3>Experience Meets Understanding</h3>
-                <p>With a combined 10 years of teaching experience, we’re not far removed from the classroom ourselves. We understand the pressures students face today, allowing us to combine real empathy with proven teaching methods to support every learner effectively.
-</p>
-            </div>
-            <div class="card">
-                <div class="icon-circle"><i class="fas fa-rocket"></i></div>
-                <h3>Flexible & Accessible Learning</h3>
-                <p>Learn from anywhere with flexible online lessons, available in both group and individual formats. We make high-quality education accessible, convenient, and adaptable to every student’s schedule, goals, and preferred learning style.
-</p>
-            </div>
-            <div class="card">
-                <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
-                <h3>Differential Learning</h3>
-                <p>Differential Learning means every student learns differently. We design personalized syllabi tailored to each learner’s strengths, pace, and goals, ensuring more effective progress, deeper understanding, and a learning experience built specifically for their success.
-</p>
-            </div>
 
-            
+
+
+    
+        <section style="padding: 100px 5%; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="zigzag-row">
+            <div class="zigzag-text" data-aos="fade-right">
+                <div class="accent-line"></div>
+                <h3 class="section-subtitle">Experience</h3>
+                <h2 class="section-title-left">Driven by True Understanding</h2>
+                <p>With a combined 10 years of teaching experience, we aren't far removed from the classroom. We understand the pressures modern students face, allowing us to combine real empathy with proven teaching methods.</p>
+            </div>
+            <div class="zigzag-visual" data-aos="fade-left">
+                <div class="glass-orb">
+                    <i class="fas fa-atom" style="font-size: 5rem; color: #a78bfa;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="zigzag-row reverse-row">
+            <div class="zigzag-text" data-aos="fade-left">
+                <div class="accent-line"></div>
+                <h3 class="section-subtitle">Adaptability</h3>
+                <h2 class="section-title-left">Flexible & Accessible</h2>
+                <p>Learn from anywhere with flexible online lessons, available in both group and individual formats. We adapt to every student's schedule, goals, and preferred learning style.</p>
+            </div>
+            <div class="zigzag-visual" data-aos="fade-right" data-aos-delay="200">
+                <div class="glass-orb">
+                    <i class="fas fa-rocket" style="font-size: 5rem; color: #6366f1;"></i>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="zigzag-row">
+            <div class="zigzag-text" data-aos="fade-right">
+                <div class="accent-line"></div>
+                <h3 class="section-subtitle">Personalization</h3>
+                <h2 class="section-title-left">Differential Learning</h2>
+                <p>Differential Learning means every student learns differently. We design personalized syllabi tailored to each learner’s strengths, pace, and goals, ensuring more effective progress, deeper understanding, and a learning experience built specifically for their success.</p>
+            </div>
+            <div class="zigzag-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="glass-orb" style="box-shadow: 0 0 40px rgba(56, 189, 248, 0.1);">
+                    <i class="fas fa-laptop-code" style="font-size: 5rem; color: #38bdf8;"></i>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="specializations" class="py-20">
-    <div class="container">
+    <section style="padding: 100px 5%; max-width: 1200px; margin: 0 auto;" data-aos="fade-up">
+        
         <h2 class="section-title">Our Expertise</h2>
-        <div class="expertise-grid">
+        <div class="accent-line" style="margin: 0 auto 60px auto;"></div>
+
+        <div class="focus-stage-container">
             
-            <div class="expertise-card">
-                <div class="expertise-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3771/3771278.png" alt="Math Icon">
-                    <h3>MATHEMATICS</h3>
-                </div>
-                <ul class="expertise-list">
-                    <li>Algebra 1 & 2</li>
-                    <li>Calculus AB, BC,I, II, III, IV</li>
-                    <li>Geometry, Trigonometry</li>
-                    <li>Differential Equations</li>
-                    <li>Linear Algebra</li>
-                    <li>SAT / PSAT Math</li>
-                </ul>
-                <a href="contact.html" class="btn-quote">Get A Quote</a>
+            <div class="focus-menu">
+                <h3 class="focus-item active" data-target="panel-math">MATHEMATICS</h3>
+                <h3 class="focus-item" data-target="panel-cs">COMPUTER SCIENCE</h3>
+                <h3 class="focus-item" data-target="panel-physics">PHYSICS</h3>
             </div>
 
-            <div class="expertise-card">
-                <div class="expertise-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2001/2001551.png" alt="CS Icon">
-                    <h3>COMPUTER SCIENCE</h3>
+            <div class="focus-panels">
+                
+                <div class="glass-panel active-panel" id="panel-math">
+                    <div class="panel-watermark"><i class="fas fa-square-root-variable"></i></div>
+                    <div class="panel-content">
+                        <h4>Mathematics Curriculum</h4>
+                        <ul>
+                            <li>Algebra 1 & 2</li>
+                            <li>Calculus AB, BC, I, II, III, IV</li>
+                            <li>Geometry & Trigonometry</li>
+                            <li>Differential Equations</li>
+                            <li>Linear Algebra</li>
+                            <li>SAT / PSAT Math</li>
+                        </ul>
+                        <a href="contact.html" class="btn-modern-auth" style="margin-top: 20px; display: inline-block;">Get A Quote</a>
+                    </div>
                 </div>
-                <ul class="expertise-list">
-                    <li>C++</li>
-                    <li>Olympiad Informatics</li>
-                    <li>Algorithms</li>
-                    <li>Data Structures</li>
-                    <li>Number Theory</li>
-                    <li>Dynamic Programming</li>
-                    <li>String Theory</li>
-                </ul>
-                <a href="contact.html" class="btn-quote">Get A Quote</a>
+
+                <div class="glass-panel" id="panel-cs">
+                    <div class="panel-watermark"><i class="fas fa-code"></i></div>
+                    <div class="panel-content">
+                        <h4>Computer Science Curriculum</h4>
+                        <ul>
+                            <li>C++</li>
+                            <li>Olympiad Informatics</li>
+                            <li>Algorithms & Data Structures</li>
+                            <li>Number Theory</li>
+                            <li>Dynamic Programming</li>
+                            <li>String Algorithms</li>
+                        </ul>
+                        <a href="contact.html" class="btn-modern-auth" style="margin-top: 20px; display: inline-block;">Get A Quote</a>
+                    </div>
+                </div>
+
+                <div class="glass-panel" id="panel-physics">
+                    <div class="panel-watermark"><i class="fas fa-atom"></i></div>
+                    <div class="panel-content">
+                        <h4>Physics Curriculum</h4>
+                        <ul>
+                            <li>AP Physics 1</li>
+                            <li>AP Physics C: Mechanics</li>
+                            <li>AP Physics C: Electricity & Magnetism</li>
+                            <li>IPHO (International Physics Olympiad)</li>
+                            <li>DP Physics</li>
+                        </ul>
+                        <a href="contact.html" class="btn-modern-auth" style="margin-top: 20px; display: inline-block;">Get A Quote</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- === PROVEN RESULTS (BENTO GRID) === -->
+    <section style="padding: 100px 5%; max-width: 1200px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 60px;" data-aos="fade-down">
+            <h3 class="section-subtitle">Students</h3>
+            <h2 class="section-title">Our Students' Success</h2>
+            <div class="accent-line" style="margin: 0 auto;"></div>
+        </div>
+
+        <div class="bento-grid">
+            
+            <!-- BENTO ITEM 1: STANDARDIZED TESTS (Large Highlight) -->
+            <div class="bento-box" data-aos="zoom-in" data-aos-delay="0">
+                <div class="bento-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Standardized Tests</h3>
+                
+                <div class="stat-item">
+                    <span class="stat-number">800</span>
+                    <span class="stat-label">SAT Math Perfect Score</span>
+                    <span class="stat-sub">Plus 4x 790 & 5x 750+</span>
+                </div>
+                
+                <div class="stat-divider"></div>
+                
+                <div class="stat-row">
+                    <div class="stat-mini">
+                        <span class="mini-num">4x</span>
+                        <span class="mini-text">AP Physics<br>Scores of 5</span>
+                    </div>
+                    <div class="stat-mini">
+                        <span class="mini-num">4x</span>
+                        <span class="mini-text">AP Calculus<br>Scores of 5</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="expertise-card">
-                <div class="expertise-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3306/3306622.png" alt="Physics Icon">
-                    <h3>PHYSICS</h3>
-                </div>
-                <ul class="expertise-list">
-                    <li>AP Physics 1 </li>
-                    <li>AP Physics C Mechanics</li>
-                    <li>AP Physics C Electricity & Magnetism</li>
-                    <li>IPHO</li>
-                    <li>DP Physics</li>
+            <!-- BENTO ITEM 2: OLYMPIADS (Updated Medals) -->
+            <div class="bento-box" data-aos="zoom-in" data-aos-delay="150">
+                <div class="bento-icon" style="color: #38bdf8;"><i class="fas fa-medal"></i></div>
+                <h3>International Olympiads</h3>
+                
+                <ul class="bento-list">
+                    <li>
+                        <strong>IYPT</strong>
+                        <span class="medal-text">🥈 2 Silver, 🥉 1 Bronze</span>
+                    </li>
+                    <li>
+                        <strong>EuPhO</strong>
+                        <span class="medal-text">🥈 Silver, 🥉 Bronze</span>
+                    </li>
+                    <li>
+                        <strong>IPHO</strong>
+                        <span class="medal-text">🥉 Bronze Medalist</span>
+                    </li>
                 </ul>
-                <a href="contact.html" class="btn-quote">Get A Quote</a>
+            </div>
+
+            <!-- BENTO ITEM 3: UNIVERSITY ADMISSIONS (Redesigned) -->
+            <div class="bento-box bento-uni" data-aos="fade-up" data-aos-delay="300">
+                <div class="uni-content">
+                    <h3>🎓 University Admissions</h3>
+                    <p>Our students secure placements at the world's most competitive Ivy League institutions.</p>
+                </div>
+                
+                <!-- The New Prestigious Grid Layout -->
+                <div class="uni-grid">
+                    <div class="uni-item">Brown University</div>
+                    <div class="uni-item">Cornell University</div>
+                    <div class="uni-item">Columbia University</div>
+                    <div class="uni-item">University of Pennsylvania</div>
+                </div>
             </div>
 
         </div>
-    </div>
-</section>
-
-
-    <section id="achievements" class="container py-20">
-    <h2 class="section-title">🏆 Our Students' Success</h2>
-    
-    <div class="achievements-box">
-        <div class="achieve-item">
-            <h3 class="blue-title">🌎 International Olympiads</h3>
-            <ul class="achieve-list">
-                <li>🥈 <strong>IYPT:</strong> 2 Silver, 1 Bronze Medals</li>
-                <li>🥉 <strong>IPHO:</strong> Bronze Medalist</li>
-                <li>🥈 <strong>EuPhO:</strong> Silver & Bronze Medalists</li>
-            </ul>
-        </div>
-
-        <div class="achieve-item">
-            <h3 class="blue-title">📝 Standardized Tests (SAT/AP)</h3>
-            <ul class="achieve-list">
-                <li>🎯 <strong>SAT Math:</strong> 1× 800, 4× 790, 5× 750+</li>
-                <li>🧪 <strong>AP Physics:</strong> 4× Scores of 5 (1 & C)</li>
-                <li>📐 <strong>AP Calculus:</strong> 4× Fives, 7× Fours (AB/BC)</li>
-            </ul>
-        </div>
-
-        <div class="achieve-item">
-            <h3 class="blue-title">🎓 University Admissions</h3>
-            <ul class="achieve-list">
-                <li>✅ Brown University</li>
-                <li>✅ Cornell University</li>
-                <li>✅ Columbia University</li>
-                <li>✅ University of Pennsylvania</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
     
 <footer class="footer-cta">
     <div class="container footer-grid">
@@ -265,16 +378,164 @@ document.addEventListener("DOMContentLoaded", function() {
     const mobileMenu = document.querySelector('#mobile-menu');
     const navWrapper = document.querySelector('#nav-wrapper');
 
-    mobileMenu.addEventListener('click', () => {
-        // Toggle the 'active' class to show the list
-        navWrapper.classList.toggle('active');
-        // Optional: animate the hamburger to an X
-        mobileMenu.classList.toggle('is-active');
+    // SAFETY CHECK: Only run this if the mobile menu button actually exists!
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            // Toggle the 'active' class to show the list
+            navWrapper.classList.toggle('active');
+            // Optional: animate the hamburger to an X
+            mobileMenu.classList.toggle('is-active');
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<script>
+    // --- THE FOCUS STAGE ENGINE ---
+    const menuItems = document.querySelectorAll('.focus-item');
+    const panels = document.querySelectorAll('.glass-panel');
+
+    // For every menu item...
+    menuItems.forEach(item => {
+        // When the mouse enters the word...
+        item.addEventListener('mouseenter', () => {
+            
+            // 1. Remove the active color from all words
+            menuItems.forEach(nav => nav.classList.remove('active'));
+            
+            // 2. Hide all the glass panels
+            panels.forEach(panel => panel.classList.remove('active-panel'));
+
+            // 3. Highlight the word we are hovering over
+            item.classList.add('active');
+
+            // 4. Find the matching panel and show it!
+            const targetId = item.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active-panel');
+        });
     });
 </script>
 
 
 
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize the Scroll Animations!
+    AOS.init({
+        duration: 800, // How long the animation takes (in ms)
+        once: true, // Whether animation should happen only once - while scrolling down
+        offset: 100 // Offset (in px) from the original trigger point
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <script src="particles-config.js"></script>
+
+    <script type="module" src="auth-logic.js"></script>
+
+
+
+
+    <div class="floating-support">
+        <a href="https://wa.me/995579101083" target="_blank" class="support-btn whatsapp-btn" title="Message us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tutorbrothers1@gmail.com&su=TutorBros+Support+Request" target="_blank" class="support-btn email-btn" title="Email TutorBros Support">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+
+<script>
+    // === DYNAMIC ACADEMIC ENGINE ===
+    // Pairs the subject with its actual mathematical or physical formula
+    const curriculum = [
+        { title: "AP Physics C", eq: "∮ E · dA = Q/ε₀" },
+        { title: "Kinematics", eq: "Δx = v₀t + ½at²" },
+        { title: "Calculus I-IV", eq: "f'(x) = lim(h→0) [f(x+h) - f(x)]/h" },
+        { title: "SAT Mathematics", eq: "ax² + bx + c = 0" },
+        { title: "Olympiad Logic", eq: "P(n) ⟹ P(n+1)" },
+        { title: "Advanced Algorithms", eq: "O(n log n)" }
+    ];
+    
+    const textElement = document.getElementById("dynamic-text");
+    const eqElement = document.getElementById("dynamic-equation");
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Fade both out
+        textElement.style.opacity = 0;
+        textElement.style.transform = "translateY(10px)";
+        eqElement.style.opacity = 0;
+        eqElement.style.transform = "translateY(10px)";
+
+        setTimeout(() => {
+            // Update both words
+            currentIndex = (currentIndex + 1) % curriculum.length;
+            textElement.innerText = curriculum[currentIndex].title;
+            eqElement.innerText = curriculum[currentIndex].eq;
+            
+            // Fade both in
+            textElement.style.opacity = 1;
+            textElement.style.transform = "translateY(0)";
+            eqElement.style.opacity = 1;
+            eqElement.style.transform = "translateY(0)";
+        }, 500); 
+
+    }, 2000); // Changes every 2 seconds
+</script>
+
+
+
+
+
+
+<script>
+    // === SMART ACTIVE NAV ENGINE ===
+    // 1. Get the exact URL the user is currently looking at
+    const currentLocation = window.location.href;
+    
+    // 2. Grab all the navigation links
+    const allNavLinks = document.querySelectorAll('.nav-link');
+    
+    // 3. Loop through them and find the match!
+    allNavLinks.forEach(link => {
+        // If the link's href exactly matches the current URL...
+        if (link.href === currentLocation) {
+            // Turn on the glowing blue line!
+            link.classList.add('active');
+        }
+    });
+</script>
+
+
+
+<script>
+    const mobileBtn = document.querySelector('.mobile-nav-toggle');
+    const mobileDrawer = document.querySelector('.nav-menu-wrapper');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileBtn.classList.toggle('active');
+        mobileDrawer.classList.toggle('active');
+    });
+
+    // Automatically close the drawer if a user clicks a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileBtn.classList.remove('active');
+            mobileDrawer.classList.remove('active');
+        });
+    });
+</script>
 
 
 </body>
