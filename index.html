@@ -396,28 +396,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <script>
-    // --- THE FOCUS STAGE ENGINE ---
+    // --- THE FOCUS STAGE ENGINE (UPDATED FOR MOBILE) ---
     const menuItems = document.querySelectorAll('.focus-item');
     const panels = document.querySelectorAll('.glass-panel');
 
     // For every menu item...
     menuItems.forEach(item => {
-        // When the mouse enters the word...
-        item.addEventListener('mouseenter', () => {
-            
-            // 1. Remove the active color from all words
-            menuItems.forEach(nav => nav.classList.remove('active'));
-            
-            // 2. Hide all the glass panels
-            panels.forEach(panel => panel.classList.remove('active-panel'));
+        
+        // We tell it to listen for BOTH a hover ('mouseenter') AND a finger tap ('click')
+        ['mouseenter', 'click'].forEach(eventType => {
+            item.addEventListener(eventType, () => {
+                
+                // 1. Remove the active color from all words
+                menuItems.forEach(nav => nav.classList.remove('active'));
+                
+                // 2. Hide all the glass panels
+                panels.forEach(panel => panel.classList.remove('active-panel'));
 
-            // 3. Highlight the word we are hovering over
-            item.classList.add('active');
+                // 3. Highlight the word we just hovered or tapped
+                item.classList.add('active');
 
-            // 4. Find the matching panel and show it!
-            const targetId = item.getAttribute('data-target');
-            document.getElementById(targetId).classList.add('active-panel');
+                // 4. Find the matching panel and show it!
+                const targetId = item.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active-panel');
+            });
         });
+        
     });
 </script>
 
