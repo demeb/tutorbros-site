@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "SAT/PSAT", "Olympiad Physics", "Calculus", "AP Physics", 
             "AP Mathematics", "High School Mathematics", "High School Physics", "C++/Algorithms"
         ],
-        locations: ["Tbilisi", "Kutaisi", "Batumi"],
+        locations: ["Tbilisi", "Kutaisi", "Batumi", "Riverside"],
         genders: ["Male", "Female"],
         lessonTypes: ["On site", "Online"]
     };
